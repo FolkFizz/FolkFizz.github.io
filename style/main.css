@@ -1,0 +1,337 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Sarabun', sans-serif;
+  margin: 0;
+}
+
+.profile-picture {
+  display: inline-block;
+  height: 350px; /* ปรับขนาด */
+  max-width: 100%; /* ปรับให้ยืดหยุ่นตาม container */
+  border-radius: 15px; /* ขอบมน */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
+  border: 3px solid #f4a9a8; /* เส้นขอบสีชมพู */
+  margin: 20px auto; /* จัดตำแหน่งตรงกลาง และเพิ่มระยะห่าง */
+}
+
+.song {
+  visibility: hidden;
+}
+@keyframes colorChange {
+  0% { background-color: #f5b4b4; }   /* สีแดง */
+  10% { background-color: #f4d6b8; }  /* สีส้ม */
+  20% { background-color: #f5f5c0; }  /* สีเหลือง */
+  30% { background-color: #cbf6a0; }  /* สีเขียวอ่อน */
+  40% { background-color: #d2f1d2; }  /* สีเขียว */
+  50% { background-color: #a8eeee; }  /* สีน้ำเงินเขียว */
+  60% { background-color: #a3c2e1; }  /* สีน้ำเงินอ่อน */
+  70% { background-color: #c4c4f2; }  /* สีน้ำเงิน */
+  80% { background-color: #dcc5f3; }  /* สีม่วงอ่อน */
+  90% { background-color: #e2b5e2; }  /* สีม่วง */
+  100% { background-color: #f3bdbd; }  /* กลับไปที่สีแดง */
+}
+.container {
+  display: flex;
+  flex-direction: column; /* จัดเรียงเป็นแนวตั้ง */
+  justify-content: center; /* จัดให้อยู่ตรงกลางในแนวตั้ง */
+  align-items: center; /* จัดให้อยู่กึ่งกลางในแนวนอน */
+  min-height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  visibility: hidden;
+  width: 100vw;
+  animation: colorChange 30s infinite;
+}
+
+.centered-image {
+  width: 400px; /* ขนาดของภาพ ปรับตามต้องการ */
+  height: auto;
+  margin-bottom: 10px; /* ระยะห่างระหว่างภาพกับข้อความ */
+  border-radius: 15px;
+}
+
+.container > div {
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 20vh;
+}
+
+.one {
+  font-size: 2rem;
+  margin-top: 10px 0 10px; /* ลดระยะห่างข้างบน */
+}
+
+.two {
+  font-size: 2rem;
+  font-weight: lighter;
+  margin: 0;
+}
+
+.three {
+  font-size: 2rem;
+}
+
+.four .text-box {
+  border: 3px solid #454141;
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
+  width: 600px;
+}
+
+.hbd-chatbox {
+  font-size: 1.5rem; /* เพิ่มขนาดข้อความ */
+  line-height: 3rem; /* เพิ่มระยะห่างระหว่างบรรทัด */
+  margin-bottom: 1.5rem; /* เพิ่มระยะห่างด้านล่าง (ถ้าจำเป็น) */
+}
+
+
+.text-box p {
+  margin: 0;
+  text-align: left;
+}
+
+.text-box span {
+  visibility: hidden;
+}
+
+.text-box .fake-btn {
+  background-color: rgb(21, 161, 237);
+  border-radius: 3px;
+  bottom: -50px;
+  color: #fff;
+  padding: .5rem 1rem;
+  position: absolute;
+  right: 5px;
+}
+
+.five p {
+  font-size: 2rem;
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+.idea-3 strong {
+  border-radius: 3px;
+  display: inline-block;
+  padding: 3px 5px;
+}
+
+.five .idea-5 {
+  font-size: 4rem;
+}
+
+.idea-5 span, .idea-6 span, .wish-hbd span {
+  display: inline-block;
+}
+
+.idea-6 span{
+  font-size: 15rem;
+}
+
+
+.six {
+  position: relative;
+  top: 10vh;
+  z-index: 1;
+}
+
+.six img {
+  display: inline-block;
+  height: 350px;
+  max-width: 100%;
+  /* height: auto; */
+}
+
+.six .hat {
+  left: 41.5%;
+  position: absolute;
+  /* transform: scale(0.1); */
+  top: -35%;
+  width: 80px;
+}
+
+.baloons img {
+  display: inline-block;
+  position: absolute;
+}
+
+.baloons img:nth-child(even) {
+  left: -10%;
+}
+
+.baloons img:nth-child(odd) {
+  right: -10%;
+}
+
+.baloons img:nth-child(3n + 0) {
+  left: 30%;
+}
+
+.seven, .eight {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+
+.eight svg {
+  left: 0;
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  width: 25px;
+  z-index: -1;
+}
+
+.eight svg:nth-child(1) {
+  fill: #bd6ecf;
+  left: 5vw;
+  top: 7vh;
+}
+
+.eight svg:nth-child(2) {
+  fill: #7dd175;
+  left: 35vw;
+  top: 23vh;
+}
+
+.eight svg:nth-child(3) {
+  fill: #349d8b;
+  left: 23vw;
+  top: 33vh;
+}
+
+.eight svg:nth-child(4) {
+  fill: #347a9d;
+  left: 57vw;
+  top: 43vh;
+}
+
+.eight svg:nth-child(5) {
+  fill: #c66053;
+  left: 7vw;
+  top: 68vh;
+}
+
+.eight svg:nth-child(6) {
+  fill: #bfaa40;
+  left: 77vw;
+  top: 42vh;
+}
+
+.eight svg:nth-child(7) {
+  fill: #e3bae8;
+  left: 83vw;
+  top: 68vh;
+}
+
+.eight svg:nth-child(8) {
+  fill: #8762cb;
+  left: 37vw;
+  top: 86vh;
+}
+
+.eight svg:nth-child(9) {
+  fill: #9a90da;
+  left: 87vw;
+  top: 94vh;
+}
+
+.wish-hbd {
+  font-size: 3em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.wish h5 {
+  font-size: 2rem;
+  font-weight: lighter;
+  margin: 10px 0 0;
+}
+
+.nine p {
+  font-size: 2rem;
+  font-weight: lighter;
+}
+
+#replay {
+  cursor: pointer;
+  z-index: 3;
+}
+
+/* Media Queries */
+@media screen and (max-height: 1000px) {
+  .six .hat {
+    left: 40%;
+  }
+}
+
+@media screen and (max-height: 800px) {
+  .six .hat {
+    left: 37%;
+  }
+}
+
+@media screen and (max-height: 700px) {
+  .six .hat {
+    left: 32%;
+  }
+}
+
+@media screen and (max-height: 850px) and (max-width: 450px) {
+  .six .hat {
+    left: 32%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    width: 90%;
+  }
+
+  .four .text-box {
+    width: 90%;
+  }
+
+  .text-box .fake-btn {
+    bottom: -38px;
+    right: 5px;
+  }
+
+  .idea-5 span {
+    display: block;
+  }
+
+  .idea-6 span {
+    font-size: 10rem;
+  }
+
+  .six .hat {
+    /* top: -20px; */
+    width: 50px;
+  }
+
+  .wish-hbd {
+    font-size: 2.2em;
+    font-weight: bold; /* ทำให้ตัวอักษรหนาขึ้น (ถ้าต้องการ) */
+    margin-bottom: 20px; /* เพิ่มระยะห่างระหว่างข้อความกับรูป */
+    text-align: center; /* จัดข้อความให้อยู่กึ่งกลาง (ถ้าจำเป็น) */
+  }
+
+  .wish h5 {
+    font-size: 1.4rem;
+  }
+
+  .nine p {
+    font-size: 1.5rem;
+    font-weight: lighter;
+  }
+}
